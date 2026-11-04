@@ -1,0 +1,253 @@
+{
+  "schema": "periodic-voronoi-aerogel-v1",
+  "generated_utc": "2026-09-30T01:46:11.878987+00:00",
+  "config": {
+    "cube_size_nm": 1000.0,
+    "thickness_nm": 5.0,
+    "diameter_min_nm": 50.0,
+    "diameter_max_nm": 80.0,
+    "target_porosity": 0.95,
+    "porosity_tolerance": 0.005,
+    "min_in_range_fraction": 0.9,
+    "random_seed": 42,
+    "num_seeds": null,
+    "seed_min_distance_factor": 0.32,
+    "qmc_power": 20,
+    "validation_qmc_power": 19,
+    "voxel_size_nm": 2.5,
+    "max_generation_attempts": 4,
+    "max_selected_faces": 25000,
+    "min_face_area_nm2": 25.0,
+    "min_face_edge_nm": 1.0,
+    "winding_offset_bound": 1,
+    "preview_face_limit": 2000,
+    "output_dir": "output/default_model"
+  },
+  "assumptions": {
+    "default_porosity_used": 0.95,
+    "geometry_periodicity": [
+      "x",
+      "y",
+      "z"
+    ],
+    "sheet_thickness_changed_by_generator": false,
+    "porosity_definition": "1 - physical union volume of finite-thickness sheets / cube volume",
+    "fdtd_boundaries": {
+      "x": "Periodic",
+      "y": "Periodic",
+      "z": "PML for finite-slab transmission"
+    }
+  },
+  "generation_attempts": [
+    {
+      "attempt": 1,
+      "random_seed": 42,
+      "num_seeds": 1391,
+      "logical_face_count": 10864,
+      "eligible_face_count": 9520,
+      "status": "REACHED",
+      "achieved_porosity": 0.9499998092651367,
+      "attainable_porosity": [
+        0.8573141098022461,
+        0.9988775253295898
+      ],
+      "selected_face_count": 3060,
+      "in_range_fraction": 0.9
+    }
+  ],
+  "geometry": {
+    "num_seeds": 1391,
+    "logical_face_count": 10864,
+    "selected_face_count": 3060,
+    "protected_open_pore_face_count": 1393,
+    "sheet_statistics": {
+      "count": 3060,
+      "diameter_nm": {
+        "min": 8.940606605764172,
+        "q10": 51.39254969833973,
+        "median": 64.19164006996212,
+        "q90": 78.12755361727474,
+        "max": 91.1280096994603,
+        "mean": 64.33855759851753,
+        "area_weighted_mean": 67.5969772483061
+      },
+      "total_midsurface_area_nm2": 10211107.585262911,
+      "preferred_range_nm": [
+        50.0,
+        80.0
+      ],
+      "in_preferred_range_count": 2754,
+      "in_preferred_range_fraction": 0.9
+    }
+  },
+  "attainable_porosity_preflight": {
+    "min_solid_fraction": 0.0011224746704101562,
+    "max_solid_fraction": 0.1426858901977539,
+    "min_porosity": 0.8573141098022461,
+    "max_porosity": 0.9988775253295898,
+    "nominal_max_solid_fraction_upper_bound": 0.14897587315462363,
+    "estimator": "Sobol QMC 2^20"
+  },
+  "attainable_porosity_preflight_scope": "Physical-union range after topology and mesh-quality exclusions. It is an optimistic dense-end bound; the configured preferred-diameter fraction is checked separately on the selected target state.",
+  "porosity": {
+    "target": 0.95,
+    "tolerance": 0.005,
+    "control_qmc": 0.9499998092651367,
+    "control_qmc_sample_count": 1048576,
+    "independent_qmc": 0.9499034881591797,
+    "independent_qmc_sample_count": 524288,
+    "voxel_count": 0.949904828125,
+    "closed_mesh_volume": 0.95038834375,
+    "reference_95pct_binomial_half_width": 0.00041716100424786344
+  },
+  "topology": {
+    "solid": {
+      "connected": true,
+      "component_count": 1,
+      "maximum_rank": 3,
+      "components": [
+        {
+          "node_count": 3060,
+          "rank": 3,
+          "axis_mask": [
+            true,
+            true,
+            true
+          ],
+          "basis": [
+            [
+              -2,
+              -2,
+              -3
+            ],
+            [
+              -2,
+              -2,
+              -2
+            ],
+            [
+              -2,
+              -1,
+              -3
+            ]
+          ]
+        }
+      ]
+    },
+    "pore": {
+      "connected": true,
+      "component_count": 1,
+      "maximum_rank": 3,
+      "components": [
+        {
+          "node_count": 1391,
+          "rank": 3,
+          "axis_mask": [
+            true,
+            true,
+            true
+          ],
+          "basis": [
+            [
+              -2,
+              0,
+              -2
+            ],
+            [
+              -2,
+              0,
+              -1
+            ],
+            [
+              -2,
+              1,
+              -3
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "voxel_mesh": {
+    "requested_spacing_nm": 2.5,
+    "effective_spacing_nm": 2.5,
+    "marching_cubes_method": "lorensen",
+    "n_vertices": 5110686,
+    "n_faces": 10226540,
+    "surface_area_nm2": 23031206.653595105,
+    "signed_volume_nm3": 49611656.25,
+    "volume_nm3": 49611656.25,
+    "is_watertight": true,
+    "boundary_edge_count": 0,
+    "nonmanifold_edge_count": 0,
+    "inconsistent_oriented_edge_count": 0,
+    "bounds_nm": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        1000.0,
+        1000.0,
+        1000.0
+      ]
+    ]
+  },
+  "shell_mesh": {
+    "vertices": 9415,
+    "triangles": 12145,
+    "thickness_um": 0.005,
+    "periodic_pair_unmatched_counts": {
+      "x": {
+        "minus": 0,
+        "plus": 0
+      },
+      "y": {
+        "minus": 0,
+        "plus": 0
+      },
+      "z": {
+        "minus": 0,
+        "plus": 0
+      }
+    }
+  },
+  "solver_size_estimates": {
+    "fdtd_uniform_grid_reference": [
+      {
+        "nominal_spacing_nm": 5.0,
+        "cells_per_axis_before_pml": 200,
+        "base_cells_before_pml": 8000000,
+        "rough_complex_field_storage_GB": 0.768
+      },
+      {
+        "nominal_spacing_nm": 2.5,
+        "cells_per_axis_before_pml": 400,
+        "base_cells_before_pml": 64000000,
+        "rough_complex_field_storage_GB": 6.144
+      },
+      {
+        "nominal_spacing_nm": 1.6666666666666667,
+        "cells_per_axis_before_pml": 600,
+        "base_cells_before_pml": 216000000,
+        "rough_complex_field_storage_GB": 20.736
+      }
+    ],
+    "note": "96 bytes/cell is only a field-storage scale; actual memory also depends on materials, PML, monitors and solver implementation."
+  },
+  "files": {
+    "solid_stl": "aerogel_solid_nm.stl",
+    "shell_bdf": "aerogel_shell.bdf",
+    "periodic_pairs": "periodic_node_pairs.json",
+    "preview": "preview.png",
+    "full_preview": "preview_full.png",
+    "lumerical_script": "import_lumerical.lsf",
+    "comsol_notes": "README_COMSOL.md",
+    "lumerical_notes": "README_LUMERICAL.md",
+    "reproducibility_data": "periodic_geometry.npz"
+  },
+  "internal_length_unit": "nm",
+  "stl_coordinate_unit": "nm",
+  "bdf_coordinate_unit": "um"
+}

@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "periodic-voronoi-aerogel"
+version = "0.1.0"
+description = "Periodic 3D Voronoi sheet and nanowire aerogel geometry generators"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=2.0",
+  "scipy>=1.14",
+  "scikit-image>=0.24",
+  "matplotlib>=3.8",
+  "plotly>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+generate-voronoi-aerogel = "voronoi_aerogel.cli:main"
+generate-voronoi-nanowire = "voronoi_nanowire.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["."]
+
+[tool.setuptools.packages.find]
+include = ["voronoi_aerogel*", "voronoi_nanowire*"]

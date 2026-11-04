@@ -1,0 +1,13 @@
+{
+  "cube_size_nm": 1000.0,
+  "num_seeds": 400,
+  "seed_min_distance_factor": 0.3,
+  "rod_diameter_nm": 20.0,
+  "target_porosity": 0.95,
+  "porosity_tolerance": 0.005,
+  "random_seed": 42,
+  "qmc_power": 18,
+  "validation_qmc_power": 19,
+  "tube_sides": 12,
+  "output_dir": "output/nanowire_default"
+}
