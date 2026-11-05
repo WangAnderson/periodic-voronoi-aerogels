@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1B5058"/>
+      <stop offset="1" stop-color="#102B37"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="248" height="248" rx="52" fill="url(#tile)"/>
+  <path d="M128 41 211 88 211 174 128 221 45 174 45 88Z"
+        fill="none" stroke="#8FC1C8" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M45 88 128 135 211 88M128 135V221"
+        fill="none" stroke="#8FC1C8" stroke-width="6" stroke-linejoin="round" opacity=".62"/>
+  <path d="M71 109 116 135 116 188 71 162Z"
+        fill="#D1ECEB" stroke="#E8F6F2" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M71 109 91 117 136 143 116 135Z" fill="#92C8CE"/>
+  <path d="M150 84 175 111 150 142 177 170 151 190M175 111 194 101M150 142 132 120"
+        fill="none" stroke="#F1B65A" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#FFD28A">
+    <circle cx="150" cy="84" r="6"/>
+    <circle cx="175" cy="111" r="7"/>
+    <circle cx="150" cy="142" r="7"/>
+    <circle cx="177" cy="170" r="7"/>
+    <circle cx="151" cy="190" r="6"/>
+  </g>
+</svg>

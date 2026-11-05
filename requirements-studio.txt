@@ -1,0 +1,4 @@
+-r requirements.txt
+PySide6-Essentials>=6.9,<7
+pyvista>=0.49,<0.50
+pyvistaqt>=0.13,<0.14

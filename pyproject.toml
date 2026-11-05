@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "periodic-voronoi-aerogel"
-version = "0.1.0"
-description = "Periodic 3D Voronoi sheet and nanowire aerogel geometry generators"
+version = "0.2.0"
+description = "Aerogel Studio desktop software and periodic Voronoi sheet/nanowire microstructure generators"
 readme = "README.md"
 license = {file = "LICENSE"}
 requires-python = ">=3.11"
@@ -17,12 +17,19 @@ dependencies = [
   "plotly>=6.0",
 ]
 
+[project.urls]
+Repository = "https://github.com/WangAnderson/periodic-voronoi-aerogels"
+Releases = "https://github.com/WangAnderson/periodic-voronoi-aerogels/releases"
+
 [project.optional-dependencies]
 dev = ["pytest>=8.0"]
+studio = ["PySide6-Essentials>=6.9,<7", "pyvista>=0.49,<0.50", "pyvistaqt>=0.13,<0.14"]
+build-studio = ["pyinstaller>=6.22,<7"]
 
 [project.scripts]
 generate-voronoi-aerogel = "voronoi_aerogel.cli:main"
 generate-voronoi-nanowire = "voronoi_nanowire.cli:main"
+aerogel-studio = "aerogel_studio.app:run"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -30,4 +37,7 @@ addopts = "-q"
 pythonpath = ["."]
 
 [tool.setuptools.packages.find]
-include = ["voronoi_aerogel*", "voronoi_nanowire*"]
+include = ["voronoi_aerogel*", "voronoi_nanowire*", "aerogel_studio*"]
+
+[tool.setuptools.package-data]
+aerogel_studio = ["assets/*.ico", "assets/*.svg", "assets/*.png"]

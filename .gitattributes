@@ -1,0 +1,2 @@
+# VTK XML contains encoded binary arrays; preserve its exact file bytes.
+*.vtp binary

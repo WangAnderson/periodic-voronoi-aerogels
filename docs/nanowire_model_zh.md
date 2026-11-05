@@ -1,5 +1,7 @@
 # 纳米线气凝胶 Voronoi 模型使用说明
 
+本页说明原有固定直径的命令行 / Spyder 展示模型。需要中文窗口、直径上下限、封闭实体 STL 或 STEP 时，请使用 [Aerogel Studio 桌面软件](desktop_studio_zh.md)；[Windows 免安装版下载](https://github.com/WangAnderson/periodic-voronoi-aerogels/releases/tag/v0.2.0)。
+
 本说明针对项目中的**纳米线模型** `voronoi_nanowire`。它在三维周期 Voronoi 剖分的边上构造有限直径的纳米棒，通过选择部分完整的 Voronoi 边控制孔隙率。这是可复现的随机几何模型；仅由孔隙率和尺寸参数生成结构，不代表已经从实验图像反演或验证了真实材料的形貌。项目中另有片层模型 `voronoi_aerogel`，两套程序的入口和配置文件不同。
 
 ## 1. 应该打开哪个文件

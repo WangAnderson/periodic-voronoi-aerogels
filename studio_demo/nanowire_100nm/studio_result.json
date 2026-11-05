@@ -1,0 +1,228 @@
+{
+  "schema": "aerogel-studio-result-v1",
+  "model": "nanowire",
+  "config": {
+    "cube_size_nm": 100.0,
+    "target_porosity": 0.92,
+    "porosity_tolerance": 0.02,
+    "random_seed": 42,
+    "qmc_power": 16,
+    "validation_qmc_power": 17,
+    "voxel_size_nm": 2.0,
+    "num_seeds": 12,
+    "rod_diameter_min_nm": 8.0,
+    "rod_diameter_max_nm": 10.0,
+    "seed_min_distance_factor": 0.3,
+    "output_dir": "."
+  },
+  "metadata": {
+    "schema": "aerogel-studio-variable-wire-v1",
+    "model_type": "periodic_voronoi_variable_nanowire",
+    "generated_utc": "2026-11-05T02:43:48.387078+00:00",
+    "coordinate_unit": "nm",
+    "config": {
+      "cube_size_nm": 100.0,
+      "target_porosity": 0.92,
+      "porosity_tolerance": 0.02,
+      "random_seed": 42,
+      "qmc_power": 16,
+      "validation_qmc_power": 17,
+      "voxel_size_nm": 2.0,
+      "num_seeds": 12,
+      "rod_diameter_min_nm": 8.0,
+      "rod_diameter_max_nm": 10.0,
+      "seed_min_distance_factor": 0.3,
+      "output_dir": "."
+    },
+    "assumptions": {
+      "rod_volume_model": "periodic union of variable-radius capsules",
+      "diameter_distribution": "uniform on canonical logical edges before selection",
+      "whole_logical_edges_only": true,
+      "solid_mesh": "voxel union clipped and closed at primary cube boundary",
+      "nominal_diameters_are_not_mesh_exact": true
+    },
+    "geometry": {
+      "seed_count": 12,
+      "logical_face_count": 92,
+      "candidate_edge_count": 160,
+      "selected_edge_count": 77,
+      "selected_edge_ids": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        9,
+        13,
+        16,
+        17,
+        19,
+        20,
+        24,
+        25,
+        27,
+        28,
+        30,
+        32,
+        35,
+        38,
+        39,
+        41,
+        42,
+        43,
+        50,
+        51,
+        59,
+        60,
+        61,
+        62,
+        63,
+        65,
+        66,
+        67,
+        68,
+        69,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        82,
+        85,
+        86,
+        88,
+        89,
+        90,
+        94,
+        100,
+        110,
+        114,
+        115,
+        116,
+        118,
+        119,
+        120,
+        122,
+        125,
+        127,
+        130,
+        131,
+        135,
+        137,
+        138,
+        141,
+        143,
+        144,
+        145,
+        146,
+        148,
+        152,
+        154,
+        155,
+        157
+      ],
+      "backbone_edge_count": 21,
+      "diameter_range_requested_nm": [
+        8.0,
+        10.0
+      ],
+      "diameter_statistics_nm": {
+        "min": 8.000263384532886,
+        "max": 9.986707339247742,
+        "mean": 8.90391586717444,
+        "standard_deviation": 0.585172421582494
+      },
+      "length_statistics_nm": {
+        "min": 0.31301498681242657,
+        "max": 63.2749343243511,
+        "mean": 18.812798956888095,
+        "standard_deviation": 13.68429939872209
+      },
+      "selected_logical_length_nm": 1448.5855196803834
+    },
+    "selection": {
+      "status": "REACHED",
+      "attainable_range": {
+        "min_solid_fraction": 0.01849365234375,
+        "max_solid_fraction": 0.1498260498046875,
+        "min_porosity": 0.8501739501953125,
+        "max_porosity": 0.98150634765625,
+        "estimator": "scrambled Sobol QMC 2^16"
+      }
+    },
+    "porosity": {
+      "target": 0.92,
+      "tolerance": 0.02,
+      "control_qmc": 0.91937255859375,
+      "control_sample_count": 65536,
+      "independent_qmc": 0.9189987182617188,
+      "independent_sample_count": 131072,
+      "voxel_count": 0.919256,
+      "closed_mesh_volume": 0.9217423333333333
+    },
+    "topology": {
+      "connected": true,
+      "has_three_axis_component": true,
+      "maximum_rank": 3
+    },
+    "voxel_mesh": {
+      "requested_spacing_nm": 2.0,
+      "effective_spacing_nm": 2.0,
+      "grid_shape": [
+        50,
+        50,
+        50
+      ],
+      "n_vertices": 13344,
+      "n_faces": 26732,
+      "surface_area_nm2": 38917.454990857645,
+      "signed_volume_nm3": 78257.66666666667,
+      "volume_nm3": 78257.66666666667,
+      "is_watertight": true,
+      "boundary_edge_count": 0,
+      "nonmanifold_edge_count": 0,
+      "inconsistent_oriented_edge_count": 0,
+      "bounds_nm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          100.0,
+          100.0,
+          100.0
+        ]
+      ]
+    },
+    "warnings": [
+      "三向贯通针对周期逻辑骨架；单胞裁剪后可含多个封闭片段，体素边界形状为有限分辨率近似。"
+    ],
+    "files": {
+      "geometry": "wire_geometry.npz",
+      "config": "config_used.json",
+      "metadata": "metadata.json"
+    }
+  },
+  "output_dir": ".",
+  "result_path": "studio_result.json",
+  "mesh_path": "studio_mesh.vtp",
+  "preview_path": "preview_mesh.vtp",
+  "mesh_purpose": "solid_mesh",
+  "counts": {
+    "full_vertices": 13344,
+    "full_triangles": 26732,
+    "preview_vertices": 13344,
+    "preview_triangles": 26732
+  },
+  "preview_simplified": false,
+  "units": {
+    "internal": "nm",
+    "export": "um"
+  },
+  "exports": {}
+}

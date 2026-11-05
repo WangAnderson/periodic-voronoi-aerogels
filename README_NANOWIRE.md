@@ -1,5 +1,7 @@
 # Periodic Voronoi nanowire display model
 
+For the **Aerogel Studio desktop application**, variable-diameter solid models and STEP export, see the [desktop guide](docs/desktop_studio_zh.md) and [Windows download](https://github.com/WangAnderson/periodic-voronoi-aerogels/releases/tag/v0.2.0). This page describes the original fixed-diameter display CLI.
+
 This generator complements the Voronoi sheet model in the same repository.
 It turns the unique edges of a three-dimensional periodic Voronoi tessellation into
 finite-diameter nanowires, keeps a connected three-axis-periodic random

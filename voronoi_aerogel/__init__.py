@@ -4,4 +4,4 @@ from .config import ModelConfig
 from .pipeline import generate_model
 
 __all__ = ["ModelConfig", "generate_model"]
-__version__ = "0.1.0"
+__version__ = "0.2.0"

@@ -1,5 +1,7 @@
 # 氧化铝气凝胶片层 Voronoi 模型：中文使用说明
 
+本页说明片层命令行 / Python API。图形界面操作和 Windows 下载请见 [Aerogel Studio 桌面软件说明](desktop_studio_zh.md)。
+
 本程序在立方体中生成三维周期 Voronoi 片层网络，供气凝胶微结构展示、几何参数研究和后续数值模拟使用。它是基于给定尺度与孔隙率的随机几何模型，不包含由显微图像反演结构、材料烧结过程或材料参数标定。
 
 片层模型代码位于 `voronoi_aerogel/`，与 `voronoi_nanowire/` 中的纳米线模型分别运行。本文所有路径均相对于下载后的仓库根目录 `periodic-voronoi-aerogels/`，所有命令均在该目录执行。
